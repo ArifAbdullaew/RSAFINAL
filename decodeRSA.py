@@ -43,9 +43,7 @@ def clearArray(bin_string, null_string):
 with open('encode.txt.txt', "r", encoding="utf-8") as f:
     text = f.read()
     text = text.replace('ё', 'е')
-# text = "◘›½►˜9◘–9&↕Z¸fш”♣˜ОЬºwуH8伊⌂ШхТ•У!"
-# d = 412991991622668624629550386957419497789
-# n = 756161596172440035818176530619958722597
+
 d = int(input("Your d\n"))
 n = int(input("Your n\n"))
 blockLength = math.floor(math.log(n, 2))
@@ -67,8 +65,7 @@ blocksJoined = list(map(lambda x: bin(pow(x, d, n))[2:].zfill(blockLength), bloc
 blocksJoined = list(map(lambda x: bin(pow(x, d, n))[2:].zfill(blockLength), blockSplitted))
 blocksJoined = ''.join(blocksJoined)
 
-# bin((num ** e) % n)[2:].zfill
-# [bin((num ** d) % n)[2:].zfill(lenblockdefault) for num in ssplit]
+
 blockLength = 8
 end = "".join([list(ascii_dict.keys())[list(ascii_dict.values()).index(block)] for block in
                clearArray(splitToBlocks(blocksJoined, blockLength), "00000000")])
