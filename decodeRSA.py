@@ -40,7 +40,7 @@ def clearArray(bin_string, null_string):
     return clear_arr
 
 
-with open('encode.txt.txt', "r", encoding="utf-8") as f:
+with open('encoded_text.txt', "r", encoding="utf-8") as f:
     text = f.read()
     text = text.replace('ё', 'е')
 
